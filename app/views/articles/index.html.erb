@@ -2,7 +2,7 @@
 
 <% @articles.each do |article| %>
 <div>
-<h3><%=article.title%></h3>
+<h3><%= link_to article.title, article %></h3>
 
 	<p>Published on <%= article.created_at.strftime('%b %d, %y')%></p>
 	<p>Filed under 
@@ -13,7 +13,8 @@
 	<% end %>
 	</p>
 	<p>
-	<%= truncate(article.content, length: 200)%>
+	<%= truncate(article.content, {length: 200}) %>
 	</p>
+
 
 <% end %>
