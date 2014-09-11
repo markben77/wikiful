@@ -1,5 +1,5 @@
 <h1>This is the index view for Articles</h1>
-
+Create new article here: <%= link_to "New Article", new_article_path %>
 <% @articles.each do |article| %>
 <div>
 <h3><%= link_to article.title, article %></h3>
