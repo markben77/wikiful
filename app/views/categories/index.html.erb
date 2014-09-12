@@ -3,8 +3,7 @@
 
 <% @categories.each do |c| %>
 
-<p><%= c.name %> <%= link_to "Edit", edit_category_path %></p>
-
+<p><%= c.name %> <%= link_to "Edit", edit_category_path(c) %></p>
 
 <% end %>
 
