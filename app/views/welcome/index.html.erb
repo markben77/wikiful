@@ -1,2 +1,8 @@
-<h1>Welcome#index</h1>
-<p>Placeholder for content</p>
+<h1>Welcome</h1>
+<p>Welcome to the wonderful world of WikiFul! Here are the latest articles:</p>
+<% @recentArticles.each do |a| %>
+
+<p><b><%= link_to a.title, a %></b> Created: <%= a.created_at %></p>
+<p><%=truncate(a.content, length: 200)%></p>
+
+<% end %>
