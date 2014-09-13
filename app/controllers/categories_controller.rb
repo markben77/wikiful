@@ -6,12 +6,6 @@ class CategoriesController < ApplicationController
 
 	def show
 		@category = Category.find(params[:id])
-		@articleCategories = ArticleCategory.where(category_id: params[:id])
-
-		@articles = []
-		@articleCategories.each do |a|
-			@articles.push(Article.find(a.article_id))
-		end
 	end
 
 	def new
