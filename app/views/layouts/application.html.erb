@@ -20,10 +20,20 @@
     </div>
   </div>
 
+
   <div class="container">
     <div class="row">
 
+  
+
       	<div class="col-lg-3 sidebar">
+      		
+      		<div class="flash-notices">
+	      		<% flash.each do |name, msg| %>
+	        		<%= content_tag :div, msg, id: "flash_#{name}" %>
+	      		<% end %>
+      		</div>
+
 	      	<div class="my-wiki-site">
 		      	<h4>My Wikiful</h4>
 		      	<ul>
