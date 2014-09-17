@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_filter :get_categories
 
+  def authorize
+    redirect_to login_url, alert: "Not authorized" if current_user.nil?
+  end
+
   private
   	def get_categories
   		@categories = Category.order(name: :asc)
